@@ -1,0 +1,39 @@
+{
+    "custom": {},
+    "full set": {
+        "real start": -2.4,
+        "real distance": 3.8,
+        "imaginary distance": 2.1375,
+        "iterations": 150
+    },
+    "1": {
+        "real start": -0.26,
+        "real distance": 0.177778,
+        "imaginary start": 0.7,
+        "iterations": 500
+    },
+    "2": {
+        "real start": -0.26,
+        "real distance": 0.08889,
+        "imaginary start": 0.68,
+        "iterations": 750
+    },
+    "3": {
+        "real start": -0.25,
+        "real distance": 8.889e-06,
+        "imaginary start": 0.65,
+        "iterations": 1000
+    },
+    "4": {
+        "real start": -0.201,
+        "real distance": 0.001,
+        "imaginary start": 0.6499,
+        "iterations": 1200
+    },
+    "5": {
+        "real start": -0.16070135,
+        "real distance": 1e-08,
+        "imaginary start": 1.03756649,
+        "iterations": 3000
+    }
+}
