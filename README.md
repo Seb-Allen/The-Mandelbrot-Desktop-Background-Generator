@@ -5,7 +5,7 @@ I learnt about the Mandelbrot set during a lecture called 'The Art of Code' that
 I enjoyed the lecture a lot, but struggled to understand many concepts because I had no experience of coding yet.
 Rewatching the lecture now that Code In Place lessons have come to end, I really appreciate just how far we've all come in such a short time!
 
-The decision to code the Mandelbrot set was borne out of nothing more than a want to do so! It's an intricate and beautiful shape. In fact, it's infinitely intricate, and is created by a remarkably simple function. While the function itself is simple, it was certainly a challenge to understand the underlying mathematical principles of complex, real and imaginary numbers, as well as how to correctly iterate the function before attempting to assimilate it into code.
+The decision to code the Mandelbrot set was born out of nothing more than a want to do so! It's an intricate and beautiful shape. In fact, it's infinitely intricate, and is created by a remarkably simple function. While the function itself is simple, it was certainly a challenge to understand the underlying mathematical principles of complex, real and imaginary numbers, as well as how to correctly iterate the function before attempting to assimilate it into code.
 
 The Mandelbrot set is a set of complex numbers that when passed into a particular function and iterated, do not tend towards infinity. Plotting these complex numbers on a graph shows the boundary of which numbers will tend towards infinity, and which remain bounded. To understand more, let's look at the function:
 
