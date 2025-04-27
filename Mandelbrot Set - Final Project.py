@@ -11,7 +11,7 @@ SCREEN_RESOLUTIONS = {
     "custom": []    
 }
 
-with open("PARAMETERS.json", ) as f:
+with open("PARAMETERS.json") as f:
     PARAMETERS = json.load(f)
 
 def main():
