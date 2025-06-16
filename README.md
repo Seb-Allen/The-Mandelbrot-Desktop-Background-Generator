@@ -9,22 +9,26 @@ The decision to code the Mandelbrot set was born out of nothing more than a want
 
 The Mandelbrot set is a set of complex numbers that when passed into a particular function and iterated, do not tend towards infinity. Plotting these complex numbers on a graph shows the boundary of which numbers will tend towards infinity, and which remain bounded. To understand more, let's look at the function:
 
-            f(z) = z ** 2 + C
+```
+f(z) = z ** 2 + C
+```
 
 To decide which numbers are included in the Mandelbrot set, we determine the behaviour of 0 under iteration of f, for a given complex number, C:
 
-            C = a + bi
+```
+C = a + bi
 
-    whereby a and b are real numbers, and i is an imaginary number that satisfies the equation:
+# whereby a and b are real numbers, and i is an imaginary number that satisfies the equation:
 
-            i ** 2 = -1
+i ** 2 = -1
+```
 
 In mathematics, we cannot multiply any two identical numbers to give a minus result, and so we simply create an imaginary number, 'i', that satisfies the equation. This is interesting, because while it may appear to be an invented convenience that cannot exist, we can prove that it does exist and is 'real'. In fact, this program will attempt to prove that imaginary numbers are 'real'!
 
 Before we attempt to prove this, let's delve a little deeper into our function. As mentioned, we are interested in how 0 behaves when z = 0, for a given C. There are two possible behaviours of z when we iterate the function for a particular value of C:
 
-    1) the distance from 0 (magnitude) of the sequence gets arbitrarily large, i.e., it tends towards infinity.
-    2) the distance from 0 is bounded, in fact, the distance never gets any larger than absolute 2.
+1. the distance from 0 (magnitude) of the sequence gets arbitrarily large, i.e., it tends towards infinity.
+2. the distance from 0 is bounded, in fact, the distance never gets any larger than absolute 2.
 
 Let's try this out using a couple of examples:
 
@@ -36,8 +40,7 @@ Let's try this out using a couple of examples:
         f(5) = 5 ** 2 + 1 = 26
         f(26) = 26 ** 2 + 1 = 677
 
-    We can see quite clearly that when C = 1, and we iterate our function to find the behaviour of 0, represented by z, that the
-    sequence gets arbitrarily large.
+We can see quite clearly that when C = 1, and we iterate our function to find the behaviour of 0, represented by `z`, that the sequence gets arbitrarily large.
 
     When C = -1:
 
@@ -46,8 +49,7 @@ Let's try this out using a couple of examples:
         f(0) = 0 ** 2 - 1 = -1
         f(-1) = -1 ** 2 - 1 = 0
 
-    In this case, when C = -1, the distance from 0 is bounded. This example shows us that different values of C can exhibit dramatically
-    different behaviour when iterated through our function.
+In this case, when C = -1, the distance from 0 is bounded. This example shows us that different values of C can exhibit dramatically different behaviour when iterated through our function.
 
 That's great, but how do we get from this function to drawing a cool shape that has an infinitely long boundary, and infinite complexity?
 
@@ -58,8 +60,8 @@ In our Python program, we start by generating a blank canvas. We can recall that
 We can test whether the complex number, C, derived from the coordinate of a specified pixel, alters the behaviour of the function so that it tends towards infinity, or it is bounded and therefore included in the Mandelbrot Set.
 
 When looking at the code, we set two conditions for the Mandelbrot function:
-    1) The function will iterate up to the number of iterations specified (which must be larger than 2).
-    2) z can never be larger than absolute 2.
+1. The function will iterate up to the number of iterations specified (which must be larger than 2).
+2. z can never be larger than absolute 2.
 
 The function then counts the number of times each value of C successfully iterates through the function, by looping through each pixel, and returns the count. The count is then used to determine what colour the pixel should be. Presently, the colour scheme is greyscale only. If the count is  fewer than the number of specified iterations, then the relationship between iterations and count is scaled to 255 (i.e., the RGB colour scheme). For all other counts for the values of C, the pixel is set to black. This means that the Mandelbrot set will appear completely black, with it's edge highlighted by white and fading again to black as we move outwards in magnitude.
 
